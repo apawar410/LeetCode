@@ -1,4 +1,4 @@
-package StreamApi;
+package leetcode;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class LearnStream {
+public class CountMatches {
 
     public static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
         AtomicInteger count = new AtomicInteger();

@@ -10,7 +10,7 @@ public class ContainDuplicates {
     public boolean containsDuplicate(int[] nums) {
         Set <Integer> st = new HashSet <Integer> ();
         for (int num:nums){
-            if (!st.add (num)) {
+            if (!st.add (num)) { // Hashset.add () returns false if value already present in HashSet else true.
                 return true;
             }
         }

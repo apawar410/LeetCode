@@ -9,12 +9,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class CountMatches {
 
-    public static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+    public static int countMatches (List<List<String>> items, String ruleKey, String ruleValue) {
         AtomicInteger count = new AtomicInteger();
       //  items.stream ().flatMap (list -> list.stream()).forEach (t->System.out.println (t));
         items.forEach (l-> {
           String [] innerItem =l.toArray (new String[0]);
             System.out.println ("Type is " + innerItem[0] + " - Color is :" + innerItem [1] + " - name is " + innerItem [2]);
+
             if ((ruleKey.equalsIgnoreCase ("type") && ruleValue.equalsIgnoreCase (innerItem [0]))
             || (ruleKey.equalsIgnoreCase ("color") && ruleValue.equalsIgnoreCase (innerItem [1]))
             || (ruleKey.equalsIgnoreCase ("name") && ruleValue.equalsIgnoreCase (innerItem [2]))) {
